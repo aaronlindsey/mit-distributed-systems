@@ -1,0 +1,36 @@
+@startuml
+skinparam shadowing false
+skinparam monochrome true
+
+"Coordinator Alice" as A -> "Worker Bob" as B : Please do X as part of my transaction
+A -> "Worker Charles" as C: Please do Y as part of my transaction
+A -> "Worker Dawn" as D: Please do Z as part of my transaction
+
+B -> A : Done with X
+C -> A : Done with Y
+D -> A : Done with Z
+
+group Two-Phase Commit
+  note over A : log BEGIN
+
+  A -> B : Prepare X
+  A -> C : Prepare Y
+  A -> D : Prepare Z
+
+  note over D : log BEGIN
+  note over D : log PREPARED
+
+  B -> A : X is prepared to commit or abort
+  C -> A : Y is prepared to commit or abort
+  D -> A : Z is prepared to commit or abort
+
+  note over A : log COMMITTED
+
+  A -> B : Commit X
+  A -> C : Commit Y
+  A -> D : Commit Z
+
+  note over D : log COMMITTED
+end
+
+@enduml
