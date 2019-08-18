@@ -10,3 +10,4 @@ Paper Summaries:
 - [Using Paxos to Build a Scalable, Consistent, and Highly Available Datastore](readings/spinnaker.md)
 - [ZooKeeper: Wait-free coordination for Internet-scale systems](readings/zookeeper.md)
 - [Principles of Computer System Design: An Introduction (Sections 9.1.5, 9.1.6, 9.5.2, 9.5.3, and 9.6.3)](readings/distributed-transactions.md)
+- [No compromises: distributed transactions with consistency, availability, and performance](readings/farm.md)
