@@ -13,3 +13,4 @@ Paper Summaries:
 - [No compromises: distributed transactions with consistency, availability, and performance](readings/farm.md)
 - [Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases](readings/aurora.md)
 - [Frangipani: A Scalable Distributed File System](readings/frangipani.md)
+- [Millions of Tiny Databases](readings/physalia.md)
